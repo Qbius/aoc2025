@@ -1,0 +1,2 @@
+#!/bin/bash
+rebar3 escriptize && ./_build/default/bin/aoc2025 "$@"
