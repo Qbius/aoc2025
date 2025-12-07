@@ -45,7 +45,7 @@ download_input(InputFilename, Day) ->
     file:write_file(InputFilename, Body).
 
 grab_input(_InputFilename, Module, true) ->
-    Module:parse(Module:example());
+    Module:parse(string:trim(Module:example()));
 grab_input(InputFilename, Module, false) ->
     {ok, Content} = file:read_file(InputFilename),
-    Module:parse(Content).
+    Module:parse(string:trim(Content)).
